@@ -1,7 +1,7 @@
 module "project-services" {
-  source  = "terraform-google-modules/project-factory/google//modules/project_services"
+  source = "terraform-google-modules/project-factory/google//modules/project_services"
 
-  project_id  = data.google_client_config.current.project
+  project_id                  = data.google_client_config.current.project
   disable_services_on_destroy = false
   activate_apis = [
     "compute.googleapis.com",
@@ -17,7 +17,8 @@ module "project-services" {
     "gkeconnect.googleapis.com",
     "gkehub.googleapis.com",
     "monitoring.googleapis.com",
-    "logging.googleapis.com"
+    "logging.googleapis.com",
+    "mesh.googleapis.com"
 
   ]
 }

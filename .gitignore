@@ -1,0 +1,18 @@
+test*
+**/.terraform/*
+
+
+terraform.tfstate*
+*.terraform*
+.vscode/
+
+
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+terraform.tfvars
+.terraform/
+terraform.tfstate*
+
+
