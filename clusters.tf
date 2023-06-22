@@ -1,5 +1,5 @@
 
-# Ahmed Emad
+
 
 
 module "primary-cluster" {
@@ -16,5 +16,19 @@ module "primary-cluster" {
   release_channel         = "REGULAR"
   cluster_resource_labels = { "mesh_id" : "proj-${data.google_project.project.number}" }
 
-}
 
+
+  node_pools = [
+    {
+      name         = "default-node-pool"
+      autoscaling  = true
+      auto_upgrade = true
+
+      # for autoscaling
+      min_node_count = 4
+      max_node_count = 10
+      node_count   = 1
+      machine_type = "e2-standard-4"
+    },
+  ]
+}
