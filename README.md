@@ -1,4 +1,5 @@
-# GCP-Project-Group-5
+# Anthos Service Mesh on GKE Cluster
+Anthos Service Mesh is a suite of tools that helps you monitor and manage a reliable service mesh on-premises or on Google Cloud.
 
 ### 1 - Prepare your environment:
 - Login to GCP: `gcloud auth login`
